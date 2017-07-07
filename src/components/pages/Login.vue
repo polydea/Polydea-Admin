@@ -1,5 +1,5 @@
 <template>
-<div class="login columns">
+  <div class="login columns">
     <div class="column is-7 is-hidden-mobile hero-banner login__left">
       <section class="hero is-fullheight is-dark">
         <div class="hero-body">
@@ -16,7 +16,7 @@
       <section class="hero is-fullheight">
         <div class="hero-heading">
           <div class="section has-text-centered">
-            <a href="http://polydea.com"><img src="../assets/img/logo_polydea.png" alt="logo polydea" width="150px"></a>
+            <a href="http://polydea.com"><img src="../../assets/img/logo_polydea.png" alt="logo polydea" width="150px"></a>
           </div>
         </div>
         <div class="hero-body">

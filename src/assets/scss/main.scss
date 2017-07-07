@@ -5,6 +5,7 @@
 @import 'conf/mixins';
 
 @import 'global/layout';
-@import 'global/home';
-@import 'global/login';
 @import 'global/menu';
+
+@import 'pages/login';
+@import 'pages/home';
