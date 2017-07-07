@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Bulma from 'bulma'
+import 'bulma/css/bulma.css'
+import './assets/scss/main.scss'
+
+Vue.use(Bulma)
+Vue.use(router)
 
 Vue.config.productionTip = false
 
