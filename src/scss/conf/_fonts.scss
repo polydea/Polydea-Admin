@@ -1,0 +1,11 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+	@font-face {
+		font-family: $font-family;
+			src: url('../fonts/#{$file-path}.otf');
+			font-weight: $font-weight;
+			font-style: $font-style;
+	}
+}
+
+@include font-face(Dinpro, DINPro-Light, 300, normal);
+@include font-face(DinPro, DINPro-Medium, 500, normal);

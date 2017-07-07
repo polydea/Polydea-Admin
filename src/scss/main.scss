@@ -1,0 +1,16 @@
+/* * * *
+* CONF
+* * * */
+@import 'conf/reset';
+@import 'conf/animations';
+@import 'conf/colors';
+@import 'conf/fonts';
+@import 'conf/mediaqueries';
+@import 'conf/mixins';
+
+/* * * *
+* GLOBAL
+* * * */
+@import 'global/interface';
+@import 'global/layout';
+@import 'global/titles';

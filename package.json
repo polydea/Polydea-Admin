@@ -1,0 +1,20 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.18.5",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "npm-zepto": "^1.1.7"
+  }
+}
