@@ -1,40 +1,21 @@
-# Simple gulp boilerplate
+# polydea-admin
 
-This repository provides a simple structure for your small and medium projects. It contains many useful additions, as well as the basic codes to use them.
-This project uses sass, and provides the minimal architecture to work in good conditions, with configuration files: mixins, colors, reset css, media queries ...
-Browser sync allows you to automatically update the page when you are working : no need to press F5 or cmd + r anymore !
-Do not hesitate to make pull requests or comment.
+> A Vue.js project
 
-# Installation
+## Build Setup
 
-Clone or download the repository, and do the following : 
-```
- $ yarn install
-```
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
 
-# Usage
+# build for production with minification
+npm run build
 
-Work into the src folder, and do the following to launch gulp :
-```
-$ gulp
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-
-# Tools
-
-* yarn
-* gulp
-* sass
-* browser-sync
-* autoprefixer
-* imagemin
-* sourcemaps
-* gulp-concat
-* plumber
-* gulp-uglify
-* modernizr
-* zepto
-* font-awesome
-
-version 1.0
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
