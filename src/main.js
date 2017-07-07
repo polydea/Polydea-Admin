@@ -6,6 +6,7 @@ import router from './router'
 import Bulma from 'bulma'
 import 'bulma/css/bulma.css'
 import './assets/scss/main.scss'
+import 'font-awesome/css/font-awesome.css'
 
 Vue.use(Bulma)
 Vue.use(router)
