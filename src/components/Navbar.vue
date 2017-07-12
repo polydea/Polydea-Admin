@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="http://bulma.io">
-        <img src="../assets/img/logo_polydea.png" alt="Bulma: a modern CSS framework based on Flexbox" height="28">
+      <a class="navbar-item" href="http://polydea.com">
+        <img src="../assets/img/logo_polydea.png" alt="Polydea Logo" height="28">
       </a>
       <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
         <span class="icon" style="color: #333;">

@@ -25,19 +25,19 @@
               <div class="column is-8 is-offset-2">
                 <div class="login-form">
                   <p class="control has-icon has-icon-right">
-                    <input class="input email-input" type="text" placeholder="thomas@polydea.com">
+                    <input v-model="credentials.username" class="input email-input" type="text" placeholder="thomas@polydea.com">
                     <span class="icon user">
                       <i class="fa fa-user"></i>
                     </span>
                   </p>
                   <p class="control has-icon has-icon-right">
-                    <input class="input password-input" type="password" placeholder="●●●●●●●">
+                    <input v-model="credentials.password" class="input password-input" type="password" placeholder="●●●●●●●">
                     <span class="icon user">
                       <i class="fa fa-lock"></i>
                     </span>
                   </p>
                   <p class="control login__button">
-                    <button class="button is-success is-outlined is-large is-fullwidth button__polydea">Connexion</button>
+                    <button class="button is-success is-outlined is-large is-fullwidth button__polydea" @click="submit()">Connexion</button>
                   </p>
                 </div>
                 <div class="section forgot-password">
@@ -49,13 +49,50 @@
             </div>
           </div>
         </div>
-      </section>  
+      </section>
     </div>
   </div>
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+  Vue.use(VueResource)
+  Vue.http.options.root = 'http://thomas-sanlis.com/polydea/api'
+
   export default {
-    name: 'login'
+    name: 'login',
+    data () {
+      return {
+        credentials: {
+          username: '',
+          password: ''
+        },
+        error: ''
+      }
+    },
+    methods: {
+      submit () {
+        var credentials = {
+          username: this.credentials.username,
+          password: this.credentials.password
+        }
+        this.getToken(credentials)
+      },
+      getToken: function (credentials) {
+        Vue.http.post('token', {grant_type: 'client_credentials', client_id: 'admin', client_secret: '5z28eE@?DnCD'}).then(response => {
+          this.getUser(response.data.access_token, credentials)
+        })
+      },
+      getUser: function (currentToken, credentials) {
+        Vue.http.get('http://thomas-sanlis.com/polydea/api/user/' + credentials.username + '/' + credentials.password, { headers: { authorization: 'Bearer ' + currentToken } }).then(response => {
+          if (response.data[0]) {
+            console.log('Authentifié !')
+          } else {
+            console.log('Mauvaise authentification')
+          }
+        })
+      }
+    }
   }
 </script>
